@@ -1,0 +1,88 @@
+.ST-filters-container {
+  position: relative;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.ST-filters-container label {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.ST-filters-container input[type="date"] {
+  width: 48%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  margin-left: 15px;
+}
+
+.ST-filters-container select {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  margin-left: 15px;
+}
+
+.ST-filters-container button.download-button {
+  background-color: var(--button-color);
+  color: #fff;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 40%;
+  font-weight: bold;
+}
+
+.ST-date {
+  flex-grow: 1;
+  font-weight: bolder;
+  font-size: 1rem;
+  color: #00001a;
+  position: absolute;
+  right: 3%;
+}
+
+.ST-filters-container button.download-button:hover {
+  background-color: var(--button-color-hover);
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease all;
+}
+.image-container::after {
+  content: "Faculty Profile";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  width: 100px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover::after {
+  opacity: 1;
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .ST-date {
+    display: none;
+  }
+}

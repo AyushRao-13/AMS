@@ -1,0 +1,31 @@
+.example {
+  padding: 20px;
+  overflow-y: auto;
+  text-align: center;
+  background: #f5f4fa;
+}
+
+@media (min-width:300px) and (max-width: 500px) {
+  .example {
+    margin-top: 5%;
+    text-align: center;
+    margin-left: 0%;
+  }
+
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .example {
+    margin-top: 5%;
+    text-align: center;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .example {
+    margin-top: 5%;
+    text-align: center;
+    margin-left: 0%;
+  }
+}

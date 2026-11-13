@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=PT+Sans+Caption&family=Poppins:wght@300&family=Source+Sans+3&display=swap');
+
+
+.attendance-table tbody tr.highlighted {
+  color: rgb(91, 88, 88);
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration-line: underline;
+}
+
+.attendance-table tbody.highlighted {
+  background-color: green;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration-line: underline;
+}
+.image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.faculty-info p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.faculty-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.faculty-qualification,
+.faculty-email {
+  font-size: 14px;
+}
+
+.attendance-rightside .image {
+  display: flex;
+  border-radius: 10px;
+  background: lightgrey;
+  padding: 2%;
+  margin-bottom: -1%;
+}
+
+.AT-date {
+  position: absolute;
+  right: 2%;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #00001a;
+  flex-grow: 1;
+}
+
+
+.date-navigation {
+  text-align: right;
+  flex-grow: 1;
+  margin-top: 1vw;
+
+}
+
+.navigation-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-color);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.navigation-button:hover {
+  background-color: var(--button-color-hover);
+}
+
+.AT-classInfo {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.AT-classInfo h1 {
+  margin-top: 2%;
+  font-size: 30px;
+  font-weight: bold;
+  width: 95%;
+  text-align: center !important;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1%;
+  margin-left: 1%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.success-message {
+  position: fixed;
+  top: 20px;
+  left: 55%;
+  transform: translateX(-50%);
+  background-color: rgb(61, 152, 61);
+  color: white;
+  padding: 10px;
+  z-index: 1;
+}
+
+.message-container {
+  position: fixed;
+  top: 20px;
+  left: 55%;
+  transform: translateX(-50%);
+  background-color: rgba(207, 3, 3, 0.863);
+  color: white;
+  border-radius: 3px;
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: shake 0.6s;
+  z-index: 1;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.statistics-card {
+  flex-basis: 30%;
+  background-color: #e0e0e0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transition: transform 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.statistics-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.today {
+  text-align: right;
+}
+
+.statistics-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0;
+  color: rgb(0, 0, 0);
+}
+
+.statistics-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+
+.attendance-container {
+  overflow-x: auto;
+  max-height: calc(100vh - 250px);
+  scrollbar-width: thin;
+  scrollbar-color: #888888 #f0f0f0;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.attendance-container::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 20px;
+}
+
+.attendance-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.attendance-container::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  border-radius: 20px;
+}
+
+.attendance-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+
+.table-description {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.table-description p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table thead tr th {
+  background-color: #72787b;
+  padding: 15px;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  background-color: white;
+}
+
+.attendance-table input[type='checkbox'] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.attendance-table input[type='checkbox']:checked {
+  background-color: green;
+  border: 1px solid #000;
+}
+
+.attendance-table input[type='checkbox']:not(:checked) {
+  background-color: red;
+  border: 1px solid #000;
+}
+
+.attendance-table input[type='checkbox'][data-status='none'] {
+  background-color: rgb(170, 170, 165);
+  border: 1px solid #000;
+}
+
+.attendance-table tfoot td {
+  font-weight: bold;
+}
+
+.submit-button {
+  position: relative;
+  padding: 10px 20px;
+  left: 35rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-color);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.submit-button:hover {
+  background-color: var(--button-color-hover);
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+}
+
+.submitting {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease all;
+}
+.image-container::after {
+  content: "Faculty Profile";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  width: 100px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover::after {
+  opacity: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .attendance-rightside .image {
+    display: flex;
+    border-radius: 10px;
+    background: lightgrey;
+    padding: 2%;
+    margin-top: 6%;
+  }
+  .submit-button{
+    margin-bottom: 5%;
+  }
+}
+
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .attendance-rightside .image {
+    display: flex;
+    border-radius: 10px;
+    background: lightgrey;
+    padding: 2%;
+    margin-top: 7%;
+  }
+
+  .AT-classInfo h1 {
+    font-weight: bold;
+    color: #333;
+    padding-top: 5%;
+    margin-top: -4%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .submit-button{
+    margin-bottom: 10%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 501px) {
+
+  .attendance-table th:first-child,
+  .attendance-table td:first-child {
+    width: 40px;
+    min-width: 40px;
+  }
+
+  .attendance-table tbody tr.highlighted {
+    background-color: rgba(91, 88, 88, 0.1);
+    font-size: 20px;
+    text-decoration-line: underline;
+    color: rgb(91, 88, 88);
+  }
+
+  .statistics-container{
+    padding: 2px;
+  }
+
+  .statistics-card{
+    height: 50px;
+    border-radius: 0;
+    padding: 2px;
+    background-color: green;
+    margin-top: 2px;
+    border-radius: 5px;
+  }
+
+  .statistics-card h3 {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 0;
+    color: rgb(0, 0, 0);
+  }
+  
+  .statistics-value{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: black;
+  }
+
+  .navigation-button {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--button-color);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .AT-classInfo h1 {
+    margin-top: 21%;
+    font-size: 20px;
+  }
+
+  .attendance-rightside .image {
+    margin-top: 10%;
+  }
+
+  .table-description {
+    display: none;
+  }
+
+  .AT-date {
+    font-size: 15px;
+    font-weight: bolder;
+    color: #00001a;
+    position: absolute;
+    right: 2%;
+    margin-top: 35%;
+    flex-grow: 1;
+  }
+
+  .today {
+    display: none;
+  }
+  .submit-button{
+    margin-bottom: 10%;
+  }
+}

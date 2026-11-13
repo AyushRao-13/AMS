@@ -1,0 +1,40 @@
+.rightbar {
+  width: 85%;
+  padding: 20px;
+  margin-left: 12%;
+  overflow-y: auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgb(5, 22, 38);
+  padding: 15px;
+  font-size: 10px;
+  justify-content: center;
+  color: white;
+}
+
+.footer p{
+  font-weight: 500;
+  position: absolute;
+  text-align: center;
+}
+
+.footer p a{
+  color:rgb(108, 108, 205);
+}
+
+@media(max-width: 1024px) {
+  .rightbar {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
